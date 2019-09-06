@@ -1,0 +1,7 @@
+
+BO_ 2180030467 AEMEngine3: 8 AEM_EMS_4
+ SG_ ECUBatteryVoltage : 55|16@0+ (0.0002455,0) [0|16.089] "voltage:V" Vector__XXX
+ SG_ IgnitionTiming : 47|8@0+ (0.35156,-17) [-17|72.65] "angle:deg" Vector__XXX
+ SG_ GearPosCalculated : 39|8@0+ (1,0) [0|255] "unitless:" Vector__XXX
+ SG_ VehicleSpeed : 23|16@0+ (0.00390625,0) [0|255.99609375] "speed:mph" Vector__XXX
+ SG_ AFR1 : 7|8@0+ (0.057227,7.325) [7.325|21.917885] "afr:AFR Gasoline" Vector__XXX

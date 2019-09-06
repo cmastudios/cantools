@@ -1,0 +1,14 @@
+{
+  "name": "@cmonahan/cantools",
+  "version": "0.0.1",
+  "description": "CAN Data Parsers",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "Connor Monahan <cma2714@gmail.com>",
+  "license": "LGPL-3.0+",
+  "dependencies": {
+    "can-dbc-decode": "0.0.2"
+  }
+}
