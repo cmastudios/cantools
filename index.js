@@ -138,12 +138,20 @@ function load_file(filename)
 			if (msgbuild != null) {
 				messages.push(msgbuild.build());
 			}
-			msgbuild = new MessageBuilder();
-			msgbuild.setLine(line);
+			try {
+				msgbuild = new MessageBuilder();
+				msgbuild.setLine(line);
+			} catch (e) {
+				console.warn(`Failed to parse message ${line}, ${e}`)
+			}
 		} else if (line.startsWith("SG_") && msgbuild != null) { // reading a new signal for current message
-			let sigbuild = new SignalBuilder();
-			sigbuild.setLine(line);
-			msgbuild.addSignal(sigbuild.build());
+			try {
+				let sigbuild = new SignalBuilder();
+				sigbuild.setLine(line);
+				msgbuild.addSignal(sigbuild.build());
+			} catch (e) {
+				console.warn(`Failed to parse signal ${line}, ${e}`)
+			}
 		}
 	}
 	// after EOF
