@@ -22,5 +22,11 @@ for (let key of Object.keys(expected)) {
     }
 }
 
+let test2 = {id: parseInt("66666666", 16), data: Buffer.from("bb0000000700d0f3", "hex")};
+let parsed2 = dbc.decode_message(test2.id, test2.data);
+for (let key of Object.keys(parsed2)) {
+    console.error(`Unexpected ${key}`);
+}
+
 
 console.log("End of test")

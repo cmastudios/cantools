@@ -34,6 +34,10 @@ class DBC {
 	decode_message(frame_id, data) {
 		let map = {};
 		let msg = this.get_message_by_frame_id(frame_id);
+		if (!msg) {
+			// message unrecognized based on current DBC file
+			return map;
+		}
 		for (let signal of msg.signals) {
 			let realstart = Math.floor(signal.start / 8) * 8 + (7 - (signal.start % 8));
 			let input = {
